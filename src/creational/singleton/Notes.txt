@@ -1,0 +1,78 @@
+Singleton Design pattern
+
+- Ensures only 1 instance of class in created
+- That will be global point of access
+- Instance will be created once, re-used throughout the application
+
+Use-cases
+
+- Logging
+- Configurations
+- DB connections
+- Caching
+- Thread Pooling
+
+Properties
+
+- Private constructor
+- A static instance of class
+- A public static method to access the instance
+
+---------------------------------------------------------
+
+Lazy Initialization
+
+- Instance created only when first requested
+- Saves memory
+- NOT thread-safe by default
+- Multiple threads can create multiple instances
+
+
+Eager Initialization
+
+- Instance created at class loading time
+- Simple and thread-safe
+- Instance created even if not used
+- Slight memory overhead
+
+-------------------------------------------------------
+
+Thread Safety
+
+ Problem:
+ - Multiple threads can enter (the static method) getInstance() at same time
+ - Results in multiple objects being created
+
+ Solutions:
+ - Synchronized method (simple, slower)
+ - Synchronized block
+ - Double-checked locking (best balance)
+ - Volatile keyword required for visibility
+
+
+---------------------------------------------------------
+
+Breaking the Singleton Pattern
+
+1) Reflection
+- Can access private constructor
+- Can create multiple instances
+
+2) Serialization / Deserialization
+- Deserialization creates a new object
+- Breaks singleton unless readResolve() is implemented
+
+3) Cloning
+- clone() can create new instance if not blocked
+
+4) Multiple ClassLoaders
+- Each classloader can create its own instance
+
+---------------------------------------------------------
+
+Enum Initialization (Best Practice)
+
+- Enum provides built-in singleton support
+- Thread-safe by default
+- Safe from reflection and serialization attacks
+- Simplest and most robust approach
