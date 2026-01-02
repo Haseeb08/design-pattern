@@ -1,0 +1,28 @@
+Builder Design Pattern
+
+- Used to construct complex objects step by step
+- Handles optional parameters cleanly
+- Improves readability and maintainability
+
+Solves
+- We have to pass too many arguments to create objects
+- Some parameters may be optional
+- Multiple constructors
+
+Use-cases
+
+- DTOs / Request objects
+- Immutable objects
+- Configuration objects
+- Objects with many optional fields
+- APIs (StringBuilder, Stream builders)
+
+Properties
+- Product class (object being built)
+- Static inner Builder class
+- Builder has same fields as product
+- Builder setter methods return this
+- build() method returns final object
+- Product class constructor accepts Builder as arg
+
+- Similar to @Builder in lombok

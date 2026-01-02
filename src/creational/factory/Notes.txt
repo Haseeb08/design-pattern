@@ -1,0 +1,90 @@
+Factory Design Pattern
+
+- Creating objects that have similar behavior or closely related.
+- When there is a superclass(interface/abstract) and multiple sub-classes, we want to
+    get objects of sub-classes based on input or requirements.
+- Provides an interface for creating objects
+- Delegates object creation logic to a factory class
+- Client does NOT know which concrete class is instantiated
+- Promotes loose coupling between client and implementation
+
+Use-cases
+
+- Notification systems (Email, SMS, Push)
+- Payment gateways (Credit Card, UPI, NetBanking)
+- Document creation (PDF, Word, Excel)
+- Logger creation
+- Object creation based on runtime input
+
+Properties
+
+- Common interface or abstract class
+- Concrete implementations of the interface
+- Factory class with a method to create objects
+- Client interacts only with the interface
+
+Problem Without Factory
+
+- Client uses new keyword directly
+- Multiple if-else or switch blocks
+- Tight coupling with concrete classes
+- Violates Open/Closed Principle
+- Hard to maintain and extend
+
+-------------------------------------------------
+
+Simple Factory (Most Common)
+
+- Factory class contains a static method
+- Uses condition (if / switch) to decide which object to create
+- Centralized object creation
+
+Pros
+
+Easy to understand
+Reduces duplication
+Clean client code
+
+Cons
+
+Factory needs modification for every new type
+Not fully Open/Closed compliant
+
+------------------------------------------------
+
+Enum Based factory
+
+- Create Enum types for each object creation
+- Each enum constant knows how to create its object
+- Enum will have a public abstract method
+- Factory class static method will have EnumConstant as argument. And it will call EnumConstant.abstactMethod()
+
+-------------------------------------------------
+
+HashMap based Factory
+
+- “Map a string key to a function that creates an object.”
+- Use static block to initialize the subclasses and store in map
+- Use Supplier - java 8 functional programming
+- No conditionals
+- Open/Closed Principle
+- Easy to add new types
+- Clean and scalable
+- Functional & modern Java
+-------------------------------------------------
+
+Factory Method (GoF Pattern)
+
+- Uses inheritance instead of conditionals
+- Factory is an interface or abstract class
+- Subclasses decide which object to create
+
+Advantages
+
+- Fully Open/Closed compliant
+- Easy to extend
+- Better for large systems
+
+Tradeoff
+- More classes
+- Slightly complex structure
