@@ -1,0 +1,57 @@
+Adapter Design Pattern
+
+- To make two unrelated interfaces work together without modifying the original code.
+- It introduces an Adapter class that acts as a bridge between a Target interface (what the client expects) and an Adaptee (the incompatible interface)
+- It clearly defines three parts:
+  Target Interface – expected by the client
+  Adaptee – the existing/incompatible class
+  Adapter – implements the target and wraps the adaptee to make them work together
+  This aligns closely with classic GoF definition.
+
+  Use cases:
+
+  - Legacy code integration
+  - Database driver adapters
+  - Third-party libraries with different APIs
+  - API version compatibility layers
+
+  Properties
+
+  Story -
+  OLD CODE (Already exists)
+
+  A wall socket always gives 240V
+
+  This code is stable & cannot be changed
+
+  NEW REQUIREMENT
+
+  Mobile phone needs 3V
+
+  Tablet needs 5V
+
+  Laptop needs 12V
+
+  🚫 We cannot change the socket
+  🚫 Client should NOT do voltage conversion logic
+
+  👉 Adapter will convert 240V → required voltage
+
+  Adapter Pattern – Voltage Example
+
+  Problem:
+  - Existing wall socket provides 240V
+  - Devices require different voltages
+  - Cannot modify existing socket code
+
+  Solution:
+  - Adapter converts 240V to required voltage
+  - Client interacts only with adapter
+
+  Pattern Type:
+  - Structural Pattern
+  - Object Adapter
+
+  Key Point:
+  - Adapter handles incompatibility
+  - Client remains clean and decoupled
