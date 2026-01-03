@@ -1,0 +1,21 @@
+Decorator Design Pattern
+
+- Decorator adds new behavior to objects dynamically without modifying their structure.
+
+- Decorator = IS-A + HAS-A
+- IS-A → implements Pizza
+- HAS-A → holds another Pizza (in base decorator)
+
+Key Characteristics:
+- Same interface as component
+- Uses composition
+- Supports multiple combinations
+
+Advantages:
+- Avoids subclass explosion
+- Open/Closed Principle
+- Flexible runtime behavior
+
+Real-world examples:
+- Java IO streams
+- Spring AOP
