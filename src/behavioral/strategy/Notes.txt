@@ -1,0 +1,38 @@
+# Strategy Design Pattern
+
+Strategy lets us change behavior at runtime without modifying the context class.
+“Same task, different ways of doing it.”
+
+Usecase -
+Multiple ways to perform the same task (e.g., payment methods)
+Different pricing / discount calculations\
+Sorting or filtering logic variations
+Authentication mechanisms (JWT, OAuth, Session)
+Game AI behaviors (aggressive, defensive)
+Load balancing or routing algorithms
+
+When NOT to Use
+
+Only one algorithm exists
+Behavior never changes
+Very simple logic (over-engineering)
+
+properties
+
+Encapsulates algorithms in separate classes
+All strategies implement a common interface
+Context delegates work to the strategy
+Strategies are interchangeable
+Uses composition over inheritance
+
+Decorator	Strategy
+Adds behavior	Selects behavior
+Wraps object	Replaces algorithm
+IS-A + HAS-A	HAS-A only
+
+Decorator = “add on”
+Strategy = “choose one”
+
+Often works with factory.
+Strategy → how discount is calculated
+Factory → which discount to apply

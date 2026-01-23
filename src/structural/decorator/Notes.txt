@@ -1,6 +1,7 @@
 Decorator Design Pattern
 
 - Decorator adds new behavior to objects dynamically without modifying their structure.
+- used to modify the functionality of an object at runtime
 
 - Decorator = IS-A + HAS-A
 - IS-A → implements Pizza

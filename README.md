@@ -10,7 +10,7 @@ This repository contains **Java implementations of design patterns** for learnin
 ## ▶️ How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/design-patterns.git
+   git clone https://github.com/Haseeb08/design-pattern.git
 2. Open the project in IntelliJ IDEA
 3. Navigate to the src/ directory
 4. Run any *Demo.java file to see the pattern in action
@@ -46,9 +46,9 @@ This repository contains **Java implementations of design patterns** for learnin
 
 ### 🧩 Structural Patterns
 
-- [ ] **Adapter**
+- [x] **Adapter**
 
-- [ ] **Decorator**
+- [x] **Decorator**
 
 - [ ] **Facade**
 
@@ -60,9 +60,9 @@ This repository contains **Java implementations of design patterns** for learnin
 
 ### 🔄 Behavioral Patterns
 
-- [ ] **Strategy**
+- [x] **Strategy**
 
-- [ ] **Observer**
+- [x] **Observer**
 
 - [ ] **Command**
 
@@ -88,3 +88,4 @@ To build a solid understanding of design patterns through hands-on coding.
 
 ## 👤 Author
 Abdul Haseeb Chouhan
+Email - yourhaseeb08@gmail.com

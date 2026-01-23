@@ -8,6 +8,8 @@ Factory Design Pattern
 - Client does NOT know which concrete class is instantiated
 - Promotes loose coupling between client and implementation
 
+Problem its solving - Object creations of concrete classes in client
+
 Use-cases
 
 - Notification systems (Email, SMS, Push)

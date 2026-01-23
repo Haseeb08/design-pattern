@@ -17,5 +17,14 @@ public class PizzaDecoratorDemo {
         );
         System.out.println(pizza2.getDescription());
         System.out.println("Total Cost: ₹" + pizza2.getCost());
+
+//        -------------------------------
+
+        Pizza pizza = new MargheritaPizza();
+        pizza = new OliveTopping(pizza);
+        pizza = new SizeDecorator(pizza, PizzaSize.LARGE);
+
+        System.out.println(pizza.getDescription());
+        System.out.println("Total Cost: ₹" + pizza.getCost());
     }
 }

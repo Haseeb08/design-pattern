@@ -10,5 +10,11 @@ public class BuilderDemo {
                 .build();
 
         System.out.println("User name - " + user.getName());
+
+        Food pizza = new Food.FoodBuilder()
+                .setName("Margherita")
+                .setExpired(false)
+                .setCategory("Veg").build();
+        System.out.println("Food Name - "+ pizza);
     }
 }

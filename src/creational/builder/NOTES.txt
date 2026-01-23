@@ -7,7 +7,7 @@ Builder Design Pattern
 Solves
 - We have to pass too many arguments to create objects
 - Some parameters may be optional
-- Multiple constructors
+- Multiple constructors - constructor explosion
 
 Use-cases
 
@@ -22,7 +22,7 @@ Properties
 - Static inner Builder class
 - Builder has same fields as product
 - Builder setter methods return this
-- build() method returns final object
+- build() method returns final object- return new product(this)
 - Product class constructor accepts Builder as arg
 
 - Similar to @Builder in lombok

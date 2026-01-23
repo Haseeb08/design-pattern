@@ -1,0 +1,15 @@
+# Observer Design Pattern
+
+Definition: Defines a one-to-many relationship between objects so that when one object changes
+    state, all of it dependents are notified and updated automatically.
+One object changes state -> Multiple objects must be notified automatically
+Subject -> Observers
+
+Properties
+
+- Subject will have one-to-many rel with observers
+- Subject does not know observer details
+- Sometimes, observers have a has-a rel with subject.
+
+- Subject: maintains a list of observers, addObserver, removeObserver, notify methods.
+- Observer: update method, Subjet instance to access

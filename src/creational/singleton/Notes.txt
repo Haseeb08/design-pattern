@@ -4,6 +4,8 @@ Singleton Design pattern
 - That will be global point of access
 - Instance will be created once, re-used throughout the application
 
+Problem its solving - How to avoid users/sys from creating more than 1 objects(instances)
+
 Use-cases
 
 - Logging
@@ -14,9 +16,9 @@ Use-cases
 
 Properties
 
-- Private constructor
-- A static instance of class
-- A public static method to access the instance
+- Private constructor -> No new
+- A static instance of class -> Only one copy
+- A public static method to access the instance -> Controlled access
 
 ---------------------------------------------------------
 
